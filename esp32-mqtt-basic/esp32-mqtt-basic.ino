@@ -98,7 +98,7 @@ void loop() {
     dtostrf(data, 1, 2, dataString);  // Esta es una función nativa de leguaje AVR que convierte un arreglo de caracteres en una variable String
     Serial.print("Contador: "); // Se imprime en monitor solo para poder visualizar que el evento sucede
     Serial.println(dataString);
-    client.publish("esp32/data", dataString); // Esta es la función que envía los datos por MQTT, especifica el tema y el valor
+    client.publish("codigoIoT/SIC/mqtt", dataString); // Esta es la función que envía los datos por MQTT, especifica el tema y el valor
   }// fin del if (timeNow - timeLast > wait)
 }// fin del void loop ()
 
